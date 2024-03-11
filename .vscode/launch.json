@@ -1,0 +1,45 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+
+        {
+            "type": "java",
+            "name": "SayHello8090",
+            "request": "launch",
+            "mainClass": "com.demo.sayhello.SayHelloApplication",
+            "projectName": "say-hello"
+        },
+        {
+            "type": "java",
+            "name": "SayHello8091",
+            "request": "launch",
+            "mainClass": "com.demo.sayhello.SayHelloApplication",
+            "projectName": "say-hello",
+            "vmArgs": "-Dserver.port=8091"
+        },
+        {
+            "type": "java",
+            "name": "SayHello8092",
+            "request": "launch",
+            "mainClass": "com.demo.sayhello.SayHelloApplication",
+            "projectName": "say-hello",
+            "vmArgs": "-Dserver.port=8092"
+        },
+        {
+            "type": "java",
+            "name": "User8888",
+            "request": "launch",
+            "mainClass": "com.demo.user.UserApplication",
+            "projectName": "user"
+        }
+    ]
+}
