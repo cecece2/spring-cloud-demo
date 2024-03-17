@@ -17,6 +17,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>micro-service</module>
+        <module>rabbit-mq</module>
     </modules>
 
     <properties>
