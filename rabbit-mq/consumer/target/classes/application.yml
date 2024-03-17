@@ -1,0 +1,5 @@
+server:
+  port: 9988
+spring:
+  application:
+    name: consumer
