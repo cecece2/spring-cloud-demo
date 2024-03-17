@@ -19,10 +19,23 @@ public class PublisherTest {
     @Autowired
     private RabbitTemplate rabbitTemplate;
     private final static String QUEUE_NAME = "hello";
+    private final static String WORK_QUEUE_NAME = "work.hello";
     @Test
     public void sand() {
         String message = "hello world!";
         rabbitTemplate.convertAndSend(QUEUE_NAME,message);
         System.out.println("send a message to queue" + message);
+    }
+
+    @Test
+    public void sandWorkQueue() throws InterruptedException {
+
+
+        for (int i = 0; i < 50; i++) {
+            String message = String.format("this is a message: Message %d",i);
+            rabbitTemplate.convertAndSend(QUEUE_NAME,message);
+            System.out.println("send a message to queue" + message);
+            Thread.sleep(200);
+        }
     }
 }

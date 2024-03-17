@@ -9,3 +9,8 @@ spring:
     virtual-host: /hello
     username: hello
     password: hello
+    listener:
+      simple:
+        prefetch: 1 #每次只能获取一条消息，处理完成才能获取下一个消息
+#  autoconfigure:
+#    exclude: org.springframework.boot.autoconfigure.amqp.RabbitAutoConfiguration
