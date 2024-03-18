@@ -6,11 +6,24 @@
     "configurations": [
         {
             "type": "java",
+            "name": "PublisherApplication",
+            "request": "launch",
+            "mainClass": "org.demo.publisher.PublisherApplication",
+            "projectName": "publisher"
+        },
+        {
+            "type": "java",
+            "name": "ConsumerApplication",
+            "request": "launch",
+            "mainClass": "org.demo.consumer.ConsumerApplication",
+            "projectName": "consumer"
+        },
+        {
+            "type": "java",
             "name": "Current File",
             "request": "launch",
             "mainClass": "${file}"
         },
-
         {
             "type": "java",
             "name": "SayHello8090",
