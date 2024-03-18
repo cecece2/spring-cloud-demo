@@ -8,6 +8,8 @@ import org.springframework.amqp.rabbit.annotation.QueueBinding;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.stereotype.Component;
 
+import java.util.Map;
+
 
 @Component
 public class SpringRabbitListener{
@@ -92,5 +94,14 @@ public class SpringRabbitListener{
     ))
     public void listenTopicQueue2(String msg){
         System.out.println("消费者接收到topic.queue2的消息：【" + msg + "】");
+    }
+
+
+    /**
+     * spring-amqp 从Basic Queue 简单队列获取转换为json的对象消息
+     */
+    @RabbitListener(queues = QUEUE_NAME)
+    public void listenHello(Map<String,Object> message){
+        System.out.println(" [*] receive: " + message);
     }
 }

@@ -101,6 +101,6 @@ public class PublisherTest {
         msg.put("name", "Jack");
         msg.put("age", 21);
         // 发送消息
-        rabbitTemplate.convertAndSend(WORK_QUEUE_NAME, msg);
+        rabbitTemplate.convertAndSend(QUEUE_NAME, msg);
     }
 }
